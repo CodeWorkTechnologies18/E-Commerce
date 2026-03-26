@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # local
     'products',
     'users',
+    'orders',
     
 ]
 
@@ -139,7 +140,7 @@ REST_FRAMEWORK = {
 
     # Permissions = WHAT the user can do
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.IsAuthenticated',
     ),
 }
 
