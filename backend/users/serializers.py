@@ -3,6 +3,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from .models import User
 
+# Create your serializers here. UserSerializer = email, username, first_name, last_name, is_active, is_email_verified
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, min_length=8)
+    password = serializers.CharField(write_only=True, min_length=8)  # password length 8
 
     class Meta:
         model = User

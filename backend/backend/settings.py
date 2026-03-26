@@ -32,9 +32,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework',
-    'corsheaders',
-
     'corsheaders',
     'rest_framework',
     'django.contrib.admin',
@@ -49,7 +46,7 @@ INSTALLED_APPS = [
     'users',
     
 ]
-
+AUTH_USER_MODEL = 'users.User'
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
