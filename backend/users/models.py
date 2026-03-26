@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+#  Create ours models here. user = email, password, is_email_verified, created_at, updated_at
 
 class User(AbstractUser):
     email = models.EmailField('email address', unique=True)
